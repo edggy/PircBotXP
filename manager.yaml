@@ -1,0 +1,7 @@
+CommandPrefix: "!"
+LoadAllCommand: "loadall"
+UnloadAllCommand: "unloadall"
+ReloadAllCommand: "reloadall"
+LoadCommand: "load"
+UnloadCommand: "unload"
+ReloadCommand: "reload"
