@@ -180,4 +180,8 @@ public class BasicIrcImpl extends AbstractIrcPlugin implements BasicIrc {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	private void createConfig() {
+		
+	}
 }

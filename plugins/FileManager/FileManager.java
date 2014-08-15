@@ -18,4 +18,5 @@ public interface FileManager extends IrcPlugin {
 
 	public BufferedReader read(String name) throws FileNotFoundException;
 	public BufferedWriter write(String name) throws IOException;
+	public void addToConfig(String setting, String fileName) throws IOException;
 }
