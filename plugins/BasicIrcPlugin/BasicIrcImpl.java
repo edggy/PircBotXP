@@ -4,28 +4,22 @@
 package BasicIrcPlugin;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
 
-import net.xeoh.plugins.base.PluginManager;
 import net.xeoh.plugins.base.annotations.PluginImplementation;
-import net.xeoh.plugins.base.annotations.events.Init;
 import net.xeoh.plugins.base.annotations.injections.InjectPlugin;
 
 import org.pircbotx.Colors;
 import org.pircbotx.PircBotX;
 import org.pircbotx.exception.IrcException;
 import org.pircbotx.hooks.Event;
-import org.pircbotx.hooks.events.MessageEvent;
 import org.pircbotx.hooks.events.PrivateMessageEvent;
 import org.yaml.snakeyaml.Yaml;
 
 import FileManager.FileManager;
 import PircBotXP.AbstractIrcPlugin;
-import PircBotXP.IrcPlugin;
 
 /**
  * @author Ethan
@@ -55,6 +49,7 @@ public class BasicIrcImpl extends AbstractIrcPlugin implements BasicIrc {
 		System.out.println("BasicIrc loaded");
 	}
 
+	@SuppressWarnings("unchecked")
 	public void init() {
 		try {
 			BufferedReader reader = man.read("BasicIrc");
@@ -82,6 +77,7 @@ public class BasicIrcImpl extends AbstractIrcPlugin implements BasicIrc {
 	/* (non-Javadoc)
 	 * @see PircBotXP.Plugin#onEvent(org.pircbotx.hooks.Event)
 	 */
+	@SuppressWarnings("rawtypes")
 	@Override
 	public void onEvent(Event e) {
 		// TODO Auto-generated method stub
@@ -165,5 +161,23 @@ public class BasicIrcImpl extends AbstractIrcPlugin implements BasicIrc {
 	public void partChannel(String channel, String reason) {
 		bot.partChannel(bot.getChannel(channel), reason);
 		System.out.println("Parting " + channel);
+	}
+
+	@Override
+	public void start() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String status() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void stop() {
+		// TODO Auto-generated method stub
+		
 	}
 }

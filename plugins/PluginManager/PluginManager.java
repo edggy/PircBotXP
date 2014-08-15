@@ -4,8 +4,6 @@
 package PluginManager;
 
 import java.util.Set;
-import java.util.TreeSet;
-
 import PircBotXP.IrcPlugin;
 
 /**

@@ -17,7 +17,6 @@ import org.pircbotx.hooks.events.PrivateMessageEvent;
 import org.yaml.snakeyaml.Yaml;
 
 import net.xeoh.plugins.base.annotations.PluginImplementation;
-import net.xeoh.plugins.base.annotations.Thread;
 import net.xeoh.plugins.base.annotations.injections.InjectPlugin;
 import net.xeoh.plugins.base.util.PluginManagerUtil;
 import FileManager.FileManager;
@@ -56,6 +55,7 @@ public class PluginManagerImpl extends AbstractIrcPlugin implements PluginManage
 		System.out.println("PluginManager loaded");
 	}
 	
+	@SuppressWarnings("unchecked")
 	public void init() {
 		BufferedReader reader;
 		try {
@@ -128,6 +128,7 @@ public class PluginManagerImpl extends AbstractIrcPlugin implements PluginManage
 		return res;
 	}
 	
+	@SuppressWarnings("rawtypes")
 	@Override
 	public void onEvent(Event e) {
 		if(status == "Inactive") return;

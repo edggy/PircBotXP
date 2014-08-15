@@ -16,7 +16,7 @@ public class PircBotXP {
 
 	@InjectPlugin
 	public static PluginManager pm = PluginManagerFactory.createPluginManager();
-	private static PircBotX bot = new PircBotX();
+	protected static PircBotX bot = new PircBotX();
 	
 	
 	/**
@@ -29,6 +29,10 @@ public class PircBotXP {
 		for ( IrcPlugin plugin : ircPlugins ) {
 			plugin.load(bot);
 		}
+	}
+	
+	public static PircBotX getBot() {
+		return bot;
 	}
 
 }

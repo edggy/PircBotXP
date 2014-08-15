@@ -27,7 +27,7 @@ public class RoomLoggerImpl extends AbstractIrcPlugin implements RoomLogger {
 	@Override
 	public void load(PircBotX bot) {
 		super.load(bot);
-		this.bot = bot;
+		//this.bot = bot;
 		//BufferedReader reader = man.read("RoomLogger");
 		System.out.println("RoomLogger loaded");
 	}
@@ -38,6 +38,7 @@ public class RoomLoggerImpl extends AbstractIrcPlugin implements RoomLogger {
 
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public void onEvent(Event event) {
 		String room = null;

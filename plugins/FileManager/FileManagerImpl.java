@@ -148,9 +148,9 @@ public class FileManagerImpl extends AbstractIrcPlugin implements FileManager {
 		}
 	}
 
+	@SuppressWarnings("rawtypes")
 	@Override
 	public void onEvent(Event e) {
-		// TODO Auto-generated method stub
-
+		return;
 	}
 }
